@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { AjaxService } from 'src/app/_service/ajax.service';
 import { ResponseData } from 'src/app/common/models/response-data.model';
 import { MessageService } from 'src/app/_service/message.service';

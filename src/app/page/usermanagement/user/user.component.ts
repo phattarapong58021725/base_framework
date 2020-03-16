@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AjaxService } from 'src/app/_service/ajax.service';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { ResponseData } from 'src/app/common/models/response-data.model';
 import { MessageService } from 'src/app/_service/message.service';
 import { Router } from '@angular/router';

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, EventEmitter, Output, AfterViewInit, OnDestroy } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ValidateService } from 'src/app/_service/validate.service';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { AjaxService } from 'src/app/_service/ajax.service';
 import { ModalSuccessComponent } from 'src/app/components/modal/modal-success/modalSuccess.component';
 import { ModalErrorComponent } from 'src/app/components/modal/modal-error/modalError.component';

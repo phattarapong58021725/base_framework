@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { UserService } from 'src/app/_service/user.service.';
 import { User } from 'src/app/_model/user';
 import { Setting } from 'src/app/_setting/setting';

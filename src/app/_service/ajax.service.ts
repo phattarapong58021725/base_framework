@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { empty, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { UserService } from './user.service.';
-import { CommonService } from './ common.service';
+import { CommonService } from './common.service';
 
 declare var apiPath: string;
 

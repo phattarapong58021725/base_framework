@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { AjaxService } from 'src/app/_service/ajax.service';
 import { ResponseData } from 'src/app/common/models/response-data.model';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { User } from 'src/app/_model/user';
 import { UserService } from 'src/app/_service/user.service.';
 import { catchError } from 'rxjs/operators';

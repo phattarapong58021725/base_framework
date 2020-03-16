@@ -3,7 +3,7 @@ import { ModalConfirmComponent } from 'src/app/components/modal/modal-confirm/mo
 import { ModalSuccessComponent } from 'src/app/components/modal/modal-success/modalSuccess.component';
 import { ModalErrorComponent } from 'src/app/components/modal/modal-error/modalError.component';
 import { AjaxService } from 'src/app/_service/ajax.service';
-import { CommonService } from 'src/app/_service/ common.service';
+import { CommonService } from 'src/app/_service/common.service';
 import { ResponseData } from 'src/app/common/models/response-data.model';
 import { MessageService } from 'src/app/_service/message.service';
 import { Router } from '@angular/router';
