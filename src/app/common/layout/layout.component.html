@@ -1,0 +1,109 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar" class="shadow" *ngIf="checkrouting">
+    <div class="sidebar-header text-center">
+      <!-- <h3>Bootstrap</h3> -->
+      <img class="logo" src="assets/img/Logo_AOT.png" alt="logo" style="width: 150px;">
+    </div>
+
+    <ul class="list-unstyled list-main components">
+      <!-- menu 1 -->
+      <li>
+        <a routerLink="/home">
+          <i class="fa fa-home"></i> หน้าแรก
+        </a>
+      </li>
+      <!-- end menu 1 -->
+      <!-- menu 2 -->
+      <li *ngIf="userSV.validateMenu(role.SETTING)">
+        <a href="#menu13" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;
+          การตั้งค่าผู้ใช้งาน
+        </a>
+        <ul class="collapse list-unstyled" id="menu13">
+          <li>
+            <a href="#" routerLink="/user/user" routerLinkActive="active" (click)="scrollToTop()"><i
+                class="fa fa-circle-thin"></i>
+              ผู้ใช้งาน </a>
+          </li>
+          <li>
+            <a href="#" routerLink="/user/role" routerLinkActive="active" (click)="scrollToTop()"><i
+                class="fa fa-circle-thin"></i>
+              สิทธิ์การใช้งาน </a>
+          </li>
+          <li>
+            <a href="#" routerLink="/user/organize" routerLinkActive="active" (click)="scrollToTop()"><i
+                class="fa fa-circle-thin"></i>
+              หน่วยงาน </a>
+          </li>
+        </ul>
+      </li>
+
+      <li *ngIf="userSV.validateMenu(role.SETTING_DATA)">
+        <a href="#menu14" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-cog" aria-hidden="true"></i>&nbsp;
+          การตั้งค่าข้อมูล
+        </a>
+        <ul class="collapse list-unstyled" id="menu14">
+          <li>
+            <a href="#" routerLink="/components/lov/" routerLinkActive="active" (click)="scrollToTop()"><i
+                class="fa fa-circle-thin"></i>
+              รายการข้อมูล LOV</a>
+          </li>
+          <li>
+            <a href="#" routerLink="/components/constant/" routerLinkActive="active" (click)="scrollToTop()"><i
+                class="fa fa-circle-thin"></i>
+              รายการConstant</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light shadow colorNav p-3" *ngIf="checkrouting">
+      <div class="container-fluid">
+        <i class="fa fa-bars" aria-hidden="true" id="sidebarCollapse" style="color:aliceblue; cursor: pointer;"></i>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" style="padding-right: 44px">
+            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+              <i class="fa fa-user "></i>
+              <!-- ดร. กษิภณ อภิมุขคุณานนท์ -->
+              {{ this.user.fullName }} | {{ this.user.organizeDesc }}
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu p-2">
+              <!-- <li><a href="#"> <i class="fa fa-gears text-info"></i> User setting</a></li>
+              <li><a href="#"> <i class="fa fa-file text-info"></i> Online Guide</a></li> -->
+              <li>
+                <!-- <hr class="mt-2"> -->
+                <a routerLink="/login"><i class="fa fa-sign-out text-danger"></i> Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!-- alert success -->
+      <div class="alert alert-success alert-dismissible fade show" style="display: none" id="alert-success">
+        <a class="close" onclick="$('#alert-success').hide()">×</a>
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+      <!-- alert danger -->
+      <div class="alert alert-danger alert-dismissible fade show" style="display: none" id="alert-danger">
+        <a class="close" onclick="$('#alert-danger').hide()">×</a>
+        <strong>Danger!</strong> fail process.
+      </div>
+      <!-- alert warning -->
+      <div class="alert alert-warning alert-dismissible fade show" style="display: none" id="alert-warning">
+        <a class="close" onclick="$('#alert-warning').hide()">×</a>
+        <strong>Warning!</strong> Warning process.
+      </div>
+      <div (click)="otherClick()">
+        <router-outlet></router-outlet>
+        <div class="pb-4">
+        </div>
+      </div>
+    </div>

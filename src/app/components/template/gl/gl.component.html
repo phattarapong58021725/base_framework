@@ -1,0 +1,107 @@
+<div class="row mt-5">
+  <div class="col-2 text-left">
+    <b> GL Management</b>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>GL Account :</p>
+  </div>
+  <div class="col-4">
+    <select class="form-control form-control-sm" [(ngModel)]="data.glAccount" (change)="callGlAccount($event.target.value)" >
+      <option *ngFor="let item of glAccountList"  value="{{item.value}}">{{item.value}} - {{item.label}}</option>
+    </select>
+  </div>
+</div>
+<!-- <div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>Tax Code :</p>
+  </div>
+  <div class="col-4">
+    <input
+      type="text"
+      class="form-control form-control-sm"
+      [(ngModel)]="data.taxCode"
+    />
+  </div>
+</div> -->
+<div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>Withholding Tax :</p>
+  </div>
+  <div class="col-4">
+    <!-- <input
+      type="text"
+      class="form-control form-control-sm"
+      [(ngModel)]="data.withholdingTax"
+    /> -->
+    <select class="form-control form-control-sm" [(ngModel)]="data.withholdingTax" (change)="callLov($event)" >
+      <option *ngFor="let item of lovList" value="{{item.lovCode}}">{{item.descTh1}}</option>
+    </select>
+  </div>
+</div>
+<!-- <div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>Special GL :</p>
+  </div>
+  <div class="col-4">
+    <input
+      type="text"
+      class="form-control form-control-sm"
+      [(ngModel)]="data.specialGl"
+    />
+  </div>
+</div> -->
+<div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>PA ค่าบริการหลัก :</p>
+  </div>
+  <div class="col-4">
+    <input
+      type="text"
+      class="form-control form-control-sm"
+      [(ngModel)]="data.paMain"
+    />
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-2 text-right ">
+    <p>PA ค่าภาระและบริการ :</p>
+  </div>
+  <div class="col-4">
+    <input
+      type="text"
+      class="form-control form-control-sm"
+      [(ngModel)]="data.paService"
+    />
+  </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col-6 text-right ">
+    <table class="table table-bordered">    
+      <tr>
+        <th scope="col" class="text-center" >#</th>
+        <th scope="col" class="text-center" >Tax Code</th>
+        <th scope="col" class="text-center" >Special GL</th>      
+      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">ขอใช้</th>
+          <td><input   [(ngModel)]="glAction[0].taxCode" class="form-control form-control-sm" type="text" placeholder=""></td>
+          <td><input   [(ngModel)]="glAction[0].specialGl"   class="form-control form-control-sm" type="text" placeholder=""></td>       
+        </tr>
+        <tr>
+          <th scope="row">ยกเลิก</th>
+          <td><input  [(ngModel)]="glAction[1].taxCode" class="form-control form-control-sm" type="text" placeholder=""></td>
+          <td><input  [(ngModel)]="glAction[1].specialGl" class="form-control form-control-sm" type="text" placeholder=""></td> 
+        </tr>
+        <tr>
+          <th scope="row">รายเดือน</th>
+          <td><input  [(ngModel)]="glAction[2].taxCode" class="form-control form-control-sm" type="text" placeholder=""></td>
+          <td><input  [(ngModel)]="glAction[2].specialGl" class="form-control form-control-sm" type="text" placeholder=""></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

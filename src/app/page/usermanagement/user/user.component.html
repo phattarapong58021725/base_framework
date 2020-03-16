@@ -1,0 +1,51 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+<app-card header="บันทึกข้อมูลไฟฟ้า" isButton="false">
+  <div class="row">
+    <div class="col-md-10 text-right">
+      <form [formGroup]="fromSearch">
+        <div class="row mt-2">
+          <div class="col-md-6 text-right ">
+            <p>Username : </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <input type="text" class="form-control form-control-sm" placeholder="Username"
+              formControlName="userName" />
+          </div>
+
+          <div class="col-md-2 text-right">
+            <button-search wording="ค้นหา"  (click)="getFindList()" ></button-search>
+            <button-add routerLink="/user/userDetail"></button-add>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-sm-12">
+      <table id="datatable" class="table table-bordered table-striped table-sm" style="width:100%">
+        <thead >
+          <tr>
+            <td class="text-center" >#</td>
+            <td class="text-center" >Name</td>
+            <td class="text-center" >Surname</td>
+            <td class="text-center" >UserName</td>
+            <td class="text-center" >Date Created</td>
+            <td class="text-center" >Action</td>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</app-card>
+<app-modal [modalId]="'modalId'" [header]="'Confirm การลบข้อมูลลูกค้านิติบุคคล'">
+  <div body>
+    คุณต้องการลบข้อมูลลูกค้านิติบุคคลใช่หรือไม่
+  </div>
+  <div footer>
+    <button-confirm></button-confirm>
+    <button-cancel></button-cancel>
+  </div>
+</app-modal>
