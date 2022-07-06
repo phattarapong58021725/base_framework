@@ -39,7 +39,7 @@
     "ngx-toastr": "^10.0.4",
     "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
-    "select2": "^4.0.6-rc.1",
+    "select2": "^4.0.6",
     "tslib": "^1.9.0",
     "zebra_datepicker": "^1.9.12",
     "zone.js": "~0.8.26"
